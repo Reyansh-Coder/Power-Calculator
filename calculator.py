@@ -1,9 +1,15 @@
-# Input base and exponent from the user
-base = float(input("Enter the base number: "))
-exponent = int(input("Enter the exponent (power): "))
+# Basic Power/Exponent Calculator using a loop
 
-# Calculate power
-result = base ** exponent
+# Get base and exponent from user
+base = int(input("Enter the base: "))
+exponent = int(input("Enter the exponent (non-negative): "))
+
+# Initialize result
+result = 1
+
+# Multiply base, exponent times
+for _ in range(exponent):
+    result *= base
 
 # Display result
-print(f"\n{base} raised to the power of {exponent} is: {result}")
+print(f"{base} raised to the power of {exponent} is {result}")
